@@ -1,8 +1,9 @@
 from flask import Flask, jsonify
 import mysql.connector
-import time
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app,origins='*')
 
 # Connect to the MySQL database
 mysql_config = {
